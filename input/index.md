@@ -1,5 +1,5 @@
-﻿Title: My First Statiq page
+﻿Title: Welcome to my Blog
 ---
-# Hello World!
+# Hi, I'm Q
 
-Hello from my first Statiq page.
+Welcome to my blog where I ramble about a few things that are imporant to me including software development, agile and the outdoors.
