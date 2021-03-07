@@ -11,7 +11,7 @@ While I may not have much more to add, but on this blog I document some of my th
 Hope it also provides some value to others. 
 
 
-Get in touch on 
+You can get in touch with me here.
 
 [twitter](https://twitter.com/qudooschaudhry) 
 
