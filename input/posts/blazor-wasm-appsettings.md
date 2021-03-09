@@ -1,4 +1,9 @@
 ﻿Title: Blazor WASM Application Settings
+Published: 2021-03-05
+Tags:
+    - .Net
+    - WASM
+    - Blazor
 ---
 
 Recently, we had an opportunity to build a brand new application for a subset of our customers. It seemed like a perfect opportunity to try Blazor in a production setting as the application was not going to be too large (famous last words:)).
@@ -9,7 +14,7 @@ One of the things we had to figure out was how to determine environments within 
 
 We had to figure out how to push the `appsettings.DEV.json` and `appsettings.PRD.json` files from our various environments. These files can have things like the environment specific API Url.
 
-By default, when we publish a WASM project, it generates a web.config inside the output folder, which has a bunch of things that allow for the WASM application to be served correctly. To setup the correct environment, we have to send a custom header named `blazor-environment`. The WASM application then uses this to determing which `appsettings` file to use. 
+By default, when we publish a WASM project, it generates a web.config inside the output folder, which has a bunch of things that allow for the WASM application to be served correctly. To setup the correct environment, we have to send a custom header named `blazor-environment`. The WASM application then uses this to determine which `appsettings` file to use. 
 
 For instance in our case we ended up adding this to the generated web.config file during our publish process
 
@@ -25,7 +30,7 @@ When we add this, the appropriate `appsettings` file is also pushed with the fir
 
 ![File2](../file2.png)
 
-Now, we just had to automate this in our build process. After adding the specific `web.DEV.config` and `web.PRD.config`, we updated the WASM csproj file to have the following target added, we utilized the `Microsoft.DotNet.Xdt.Tools` nuget package to perform our config transforms. We just had to edit our WASM csproj file like so. 
+We added the default web.config into our WASM project and also added the specific `web.DEV.config` and `web.PRD.config`. We also updated the WASM csproj file to have the following target added and utilized the `Microsoft.DotNet.Xdt.Tools` nuget package to perform our config transforms. We just had to edit our WASM csproj file like so. 
 
 ```
 <Target Name="ApplyXdtConfigTransform" BeforeTargets="_TransformWebConfig">
