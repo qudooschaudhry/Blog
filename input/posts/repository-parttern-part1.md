@@ -11,9 +11,11 @@ Recently, I had this [conversation](https://twitter.com/qudooschaudhry/status/13
 
 ![Tweet Repo](tweet_repo.png)
 
-There is a lot of material out there talking in favour of or against the repository pattern. It is hard to explain your point on twitter, so I thought I need to document my thoughts in the form of a post. So, let's dive in.
+I know, my response is a little cheeky. A better answer would have been "it depends" ;)
 
-## What is The Repository Pattern? 
+I think there are times when it makes sense and there is a lot of material out there talking in favour of or against the repository pattern. I also wanted to document my thoughts in the form of a post. So, let's dive in.
+
+## What is the Repository Pattern? 
 
 As awlays, Martin Fowler has a good quick [explanation](https://martinfowler.com/eaaCatalog/repository.html) on the PEAA catalog. That first line 
 
